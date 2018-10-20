@@ -4,28 +4,20 @@ Vue.component('template-cs', {
   props: ['comment'],
   data: function() {
     return{
-      plus: false,
-      minus: false
+      plus: false
     }
   },
   methods: {
     sundul: function() {
       this.plus = !this.plus
-      this.minus = false
-    },
-    gandul: function() {
-      this.minus = !this.minus
-      this.plus = false
     }
   },
   computed: {
     coto: function() {
       if (this.plus) {
-        this.comment.coto + 1
-      } else if (this.minus) {
-        this.comment.coto - 1
+        return this.comment.coto + 1
       } else {
-        this.comment.coto
+        return this.comment.coto
       }
     }
   }

@@ -10,15 +10,17 @@
 
     <div id="app">
       <ul>
-        <template-cs v-for='comment in comments' :comment="comment"></template-cs>
+        <template-cs v-for="comment in comments" :comment="comment"></template-cs>
       </ul>
     </div>
 
     <template id="comment-template">
-      <div v-on:click="sundul">+</div>
-      <p>{{ comment.body }}</p>
+      <div>
+        <p>{{ comment.body }} - {{ comment.time }} || Coto: {{ coto }}</p>
+        <span><a href="#" @click.prevent="sundul" :class="{'tercoto':plus}"><+>vote</a></span>
+      </div>
     </template>
-    
+
     <script src="vue.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
