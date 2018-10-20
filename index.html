@@ -12,6 +12,9 @@
       <ul>
         <template-cs v-for="comment in comments" :comment="comment"></template-cs>
       </ul>
+      <ul>
+        <textarea v-model="text_comment" @keyup.enter="postComment"></textarea>
+      </ul>
     </div>
 
     <template id="comment-template">

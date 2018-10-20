@@ -30,6 +30,15 @@ var vm = new Vue({
       { body: 'Ini komen pertama', time:'02-12-18', coto:0 },
       { body: 'Ini komen kedua', time:'03-12-18', coto:2 },
       { body: 'Ini komen ketiga', time:'02-14-18', coto:6 }
-    ]
+    ],
+    text_comment: ''
+  },
+  methods: {
+    postComment: function(){
+      this.comments.push(
+        { body: this.text_comment, time:'02-14-18', coto:0 }
+      )
+      this.text_comment = ''
+    }
   }
 });
