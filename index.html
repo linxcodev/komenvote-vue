@@ -8,7 +8,17 @@
   <body>
     <h1>Belajar Vue js <span>Komentar&vote</span></h1>
 
+    <div id="app">
+      <ul>
+        <template-cs v-for='comment in comments' :comment="comment"></template-cs>
+      </ul>
+    </div>
 
+    <template id="comment-template">
+      <div v-on:click="sundul">+</div>
+      <p>{{ comment.body }}</p>
+    </template>
+    
     <script src="vue.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
